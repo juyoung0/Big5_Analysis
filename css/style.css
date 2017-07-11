@@ -1,0 +1,137 @@
+body {
+    font: 10px sans-serif;
+}
+
+.outer {
+    shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+}
+
+.legend{
+    margin-bottom:50px;
+
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.top{
+    width:100%;
+    display:flex;
+}
+
+.top_sub{
+    width:50%;
+    display:flex;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+svg {
+    font: 10px sans-serif;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    cursor: move;
+}
+
+.background{
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+
+.foreground{
+    fill: none;
+    stroke: steelblue;
+}
+
+.highlight{
+    fill: none;
+    stroke: #d50500;
+}
+
+.brush .extent {
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.axisM line {
+    stroke: #ddd;
+}
+
+.axisM path {
+    display: none;
+}
+
+.axis,
+.frame {
+    shape-rendering: crispEdges;
+}
+
+.cell text {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.frame {
+    fill: none;
+    stroke: #aaa;
+}
+
+circle {
+    fill-opacity: .7;
+}
+
+.view {
+    fill: none;
+    stroke: #000;
+}
+
+circle {
+    fill-opacity: .7;
+}
+circle.hidden {
+    fill: #ccc !important;
+}
+
+.extent {
+    fill: #000;
+    fill-opacity: .125;
+    stroke: #fff;
+}
