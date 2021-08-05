@@ -1,5 +1,6 @@
 # README #
 본 프로젝트는 대학교 인문계열 교수님의 연구과제인 Big 5 성격유형과 강의 참여도, 출석률, 성적등의 연관 관계를 보고자 만든 데이터시각화 웹페이지 입니다.
+Scattor Plot, Parallel Coordinate Plot, Scatterplot Matrix 를 활용하였습니다.
 
 ### 개발 개요 ###
 
