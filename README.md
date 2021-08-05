@@ -13,4 +13,5 @@
 
 [데모 영상](https://github.com/juyoung0/big5analysis/blob/master/video/Big5Analysis%EB%85%B9%ED%99%94.mov)
 
-<img src="{screenshot}"/>
+<img width="1784" alt="스크린샷 2021-08-05 오후 5 09 10" src="https://user-images.githubusercontent.com/8486747/128315358-0659509c-4da9-401f-9c5d-919964a7dc10.png">
+
