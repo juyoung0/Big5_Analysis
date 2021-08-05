@@ -1,29 +1,19 @@
 # README #
+본 프로젝트는 대학교 인문계열 교수님의 연구과제인 Big 5 성격유형과 강의 참여도, 출석률, 성적등의 연관 관계를 보고자 만든 데이터시각화 웹페이지 입니다.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### 개발 개요 ###
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* 개발 기간 : 2017.1 ~ 2017.2
+* 개발 인원 : 혼자 진행
+* 사용 스택 : Javascript, d3.js
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Big 5 Analysis : https://ko.wikipedia.org/wiki/5%EA%B0%80%EC%A7%80_%EC%84%B1%EA%B2%A9_%ED%8A%B9%EC%84%B1_%EC%9A%94%EC%86%8C
+* Big 5 지표 : 신경성, 외향성, 친화성, 성실성, 경험에 대한 개방성
+* 그 외 강의 관련 지표 : 팀과제 점수, PT 점수, 출석율, 참여도 점수, 파이널 점수
 
-### Contribution guidelines ###
+### 데모 영상 ###
+git
+<img src="복사해온 URL">
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

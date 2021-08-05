@@ -1,5 +1,6 @@
-
-
+/**
+ * Created by 오주영 on 2017-02-05.
+ */
 var ScatterPlot = function(filepath) {
 
     var colorList = d3.scaleOrdinal(d3.schemeCategory10);
@@ -14,15 +15,15 @@ var ScatterPlot = function(filepath) {
 
     var svg = d3.select("#plotGraph")
         .append("svg")
-        .attr("width", w)
-        .attr("height", h);
-       // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("width", w - margin.left*2)
+        .attr("height", h - margin.top*2)
+        .attr("transform", "translate(" + margin.left/2 + "," + margin.top/2 + ")");
 
     var outer = svg.append("rect")
         .attr("class", "outer")
-        .attr("width", width + 20)
-        .attr("height", height + 10)
-        .attr("transform", "translate(" + margin.left/2 + "," + margin.top/2 + ")");
+        .attr("width", width)
+        .attr("height", height)
+        //.attr("transform", "translate(" + margin.left/2 + "," + margin.top/2 + ")");
 
 
     var group = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
@@ -43,7 +44,7 @@ var ScatterPlot = function(filepath) {
                 d.Final = +d.Final;
                 d.Attendance = +d.Attendance;
                 d.Participation = +d.Participation;
-                d. Extraversion= +d. Extraversion;
+                d.Extraversion= +d.Extraversion;
                 d.Agreeableness = +d.Agreeableness;
                 d.Conscientiousness = +d.Conscientiousness;
                 d.Neuroticism= +d.Neuroticism;

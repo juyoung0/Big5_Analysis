@@ -32,8 +32,6 @@ var ParallelCoord = function () {
         .append("g");
 
     d3.csv("../data/normalized_big5_class.csv", function (error, data) {
-
-
         var colName = ["Team", "Pt", "Final", "Attendance", "Participation", "Extraversion","Agreeableness","Conscientiousness","Neuroticism","Openness"];
         data.forEach(function (d, i) {
             dataSet.push([+d.Team, +d.PT, +d.Final, +d.Attendance, +d.Participation, +d.Extraversion, +d.Agreeableness, +d.Conscientiousness, +d.Neuroticism, +d.Openness]);
@@ -227,6 +225,7 @@ var ParallelCoord = function () {
         brushNum = actives.length;
         if(brushNum != 0)
             plotHighlight(indexList);
+            plotmatrixHighlight(indexList);
     }
 
     /* Funtion for interaction */

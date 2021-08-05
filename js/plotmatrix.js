@@ -142,7 +142,6 @@ var ScatterPlotMatrix = function(pc) {
             if (brushCell !== this) {
                 d3.select(brushCell).call(brush.move, null);
                 brushCell = this;
-                console.log(p);
                 bigx.domain(domainByTrait[p.x]);
                 bigy.domain(domainByTrait[p.y]);
             }
@@ -152,8 +151,8 @@ var ScatterPlotMatrix = function(pc) {
         function brushmove(p) {
             var e = d3.brushSelection(this);
             svg.selectAll("circle").classed("hidden", function(d) {
-                console.log(bigx(+d[p.x]));
-                console.log(bigy(+d[p.y]));
+                // console.log(bigx(+d[p.x]));
+                // console.log(bigy(+d[p.y]));
                 return !e
                     ? false
                     : (
@@ -203,7 +202,7 @@ var ScatterPlotMatrix = function(pc) {
             bigCell.append("rect")
                 .attr("id", "frameRect")
                 .attr("class", "frame")
-                .attr("x", padding / 2)
+                .attr("x", padding)
                 .attr("y", padding / 2)
                 .attr("width", size * n - padding )
                 .attr("height", size * n - padding );
@@ -221,7 +220,9 @@ var ScatterPlotMatrix = function(pc) {
                 .attr("cy", function (d) {
                     return bigy(d[p.y]);
                 })
-               // .transition()
+                .attr("class", function(d, i) {
+                    return "bigcircle bigindex_" + i;
+                })
                 .attr("r", 5)
                 .style("fill", function(d, i) { return color(data[i].classNum - 1); })
                 .on("mouseover", function (d, i) {
@@ -233,8 +234,18 @@ var ScatterPlotMatrix = function(pc) {
                         .style("fill", function(d, i) { return color(data[i].classNum - 1); });
                     pc.pcDeHighlight(i);
                 });
+        }
 
+        /* Funtion for interaction */
+        this.plotmatrixHighlight = function (indexList) {
+            d3.selectAll(".bigcircle").style("opacity", 0.2);
+            indexList.forEach(function(d,i){
+                d3.selectAll(".bigindex_" + indexList[i]).style("opacity", 1);
+            })
+        }
 
+        this.plotmatrixDeHighlight = function () {
+            d3.selectAll(".bigcircle").style("opacity", 1);
         }
     });
 
